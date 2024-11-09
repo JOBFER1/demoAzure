@@ -53,6 +53,10 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1584C1025DC54AB4989E0B8335D402A6 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_147FE81FAA3A49CAAA52378276A85E8A }}
 
+	  # ---- Added Task ---- # 19. 
+	  - name: Rename .War file 20. 
+	  	run: move *.war ROOT.war
+
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
